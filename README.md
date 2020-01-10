@@ -1,5 +1,18 @@
 # Full stack JS practice project
 A project for practice Fullstack JS technologies
+
+Run project locally (tested on Docker Desktop v19)
+```bash
+cd ".docker"
+docker-compose up -d
+open http://localhost:4200
+```
+
+Run frontend tests
+```bash
+docker-compose exec frontend ng test --watch=false
+docker-compose exec frontend ng e2e --port 4202
+```
 ## Frontend 
 - [ ] Smart containers/Dummy components pattern 
 - [ ] Module organization: core, shared, feature
@@ -17,7 +30,6 @@ A project for practice Fullstack JS technologies
     - [ ] HttpClient for all async calls
 - [ ] Unit tests
     - [ ] Karma
-    - [ ] Code coverage report
 
 ## Backend 
 - [ ] NodeJs API
@@ -28,10 +40,14 @@ A project for practice Fullstack JS technologies
 
 ## DevOps
 - [ ] Use docker containers 
+    - [ ] Frontend image for development
+    - [ ] Backend image for development
 - [ ] CI
     - [ ] Setup GitHub actions
     - [ ] Run tests
     - [ ] Publish coverage report
 - [ ] CD
     - [ ] Build image
+    - [ ] Frontend image for deployment
+    - [ ] Backend images for deployment
     - [ ] Push to dockerhub 
