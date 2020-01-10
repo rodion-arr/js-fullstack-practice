@@ -40,7 +40,7 @@ docker-compose exec frontend ng e2e --port 4202
 
 ## DevOps
 - [ ] Use docker containers 
-    - [ ] Frontend image for development
+    - [x] Frontend image for development - [#1](https://github.com/rodion-arr/js-fullstack-practice/pull/1)
     - [ ] Backend image for development
 - [ ] CI
     - [ ] Setup GitHub actions
