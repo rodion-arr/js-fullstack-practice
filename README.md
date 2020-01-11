@@ -17,6 +17,7 @@ docker-compose exec frontend ng e2e --port 4202
 - [ ] Smart containers/Dummy components pattern 
 - [ ] Module organization: core, shared, feature
 - [ ] Templates 
+    - [x] Angular Material - [#2](https://github.com/rodion-arr/js-fullstack-practice/pull/2)
     - [ ] SASS for styling
     - [ ] Build custom pipe
     - [ ] Build custom directive
