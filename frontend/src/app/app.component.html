@@ -1,1 +1,18 @@
-<mat-toolbar color="primary">My App</mat-toolbar>
+<mat-toolbar class="top-menu">
+  <img class="logo" src="assets/img/logo.png" alt="Logo">
+
+  <div class="menu-row">
+    <a mat-button [routerLink]="['/home']" routerLinkActive="active">Home</a>
+    <a mat-button>About</a>
+    <a mat-button [matMenuTriggerFor]="belowMenu">Products</a>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <a mat-menu-item>Item 1</a>
+      <a mat-menu-item>Item 2</a>
+    </mat-menu>
+    <a mat-button>Events</a>
+    <a mat-button>Contact Us</a>
+  </div>
+</mat-toolbar>
+
+
+<router-outlet></router-outlet>
