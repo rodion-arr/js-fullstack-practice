@@ -28,7 +28,8 @@ docker-compose exec frontend ng e2e --port 4202
 - [ ] Async operations
     - [ ] NgRx for store
         - [ ] CRUD with entities
-    - [ ] HttpClient for all async calls
+    - [ ] HttpClient for all async call
+    - [ ] Build HttpInterceptor   
 - [ ] Unit tests
     - [ ] Karma
 
