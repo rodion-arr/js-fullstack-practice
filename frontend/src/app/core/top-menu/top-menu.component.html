@@ -1,0 +1,26 @@
+<mat-toolbar class="top-menu">
+  <img class="logo" src="assets/img/logo.png" alt="Logo">
+
+  <div class="menu-row" [ngClass]="{'small': (isSmallScreen$ | async), 'opened': isHamburgerMenuOpened}">
+    <a mat-button [routerLink]="['/home']" routerLinkActive="active">Home</a>
+    <a mat-button>About</a>
+    <a mat-button [matMenuTriggerFor]="productsMenu">Products</a>
+    <a mat-button>Events</a>
+    <a mat-button>Contact Us</a>
+  </div>
+
+  <mat-menu #productsMenu="matMenu" yPosition="below" xPosition="after">
+    <a mat-menu-item>Item 1</a>
+    <a mat-menu-item>Item 2</a>
+  </mat-menu>
+
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    *ngIf="isSmallScreen$ | async"
+    class="hamburger-button"
+  >
+    <mat-icon aria-label="Side nav toggle icon" (click)="triggerHamburgerMenu()">menu</mat-icon>
+  </button>
+</mat-toolbar>
