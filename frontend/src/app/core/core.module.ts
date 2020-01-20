@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { throwIfAlreadyLoaded } from './module-import-check';
 import { TopMenuComponent } from './top-menu/top-menu.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -12,8 +13,8 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
     SharedModule,
     RouterModule,
   ],
-  declarations: [TopMenuComponent],
-  exports: [TopMenuComponent],
+  declarations: [TopMenuComponent, FooterComponent],
+  exports: [TopMenuComponent, FooterComponent],
 })
 export class CoreModule {
   constructor(
