@@ -1,37 +1,35 @@
 @import "variables"
 
-.top-menu
-  position: fixed
-  height: 86px
-  top: 0
-  left: 0
-  right: 0
-  z-index: 2
-  background-color: #fff
-  margin: 0 auto
-  max-width: $container-width
+.wrapper
   border-bottom: 1px solid #eee
 
-  .menu-row
-    margin-left: auto
+  .top-menu
+    height: 86px
+    background-color: #fff
+    margin: 0 auto
+    max-width: $container-width
+    padding: 0
 
-    .active
-      color: $app-primary-color
-      border-top: 5px solid $app-primary-color
+    .menu-row
+      margin-left: auto
 
-    &.small
-      display: none
+      .active
+        color: $app-primary-color
+        border-top: 5px solid $app-primary-color
 
-      &.opened
-        display: block
-        position: absolute
-        left: 0
-        top: 86px
-        width: 100%
-        background-color: #fff
+      &.small
+        display: none
 
-        [mat-button]
+        &.opened
           display: block
+          position: absolute
+          left: 0
+          top: 86px
+          width: 100%
+          background-color: #fff
 
-  .hamburger-button
-    margin-left: auto
+          [mat-button]
+            display: block
+
+    .hamburger-button
+      margin-left: auto

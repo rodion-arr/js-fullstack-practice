@@ -18,6 +18,7 @@ docker-compose exec frontend ng e2e --port 4202
 - [x] Module organization: core, shared, feature - [#3](https://github.com/rodion-arr/js-fullstack-practice/pull/3)
 - [ ] Templates 
     - [x] Angular Material - [#2](https://github.com/rodion-arr/js-fullstack-practice/pull/2)
+    - [ ] Angular Flex
     - [ ] SASS for styling
     - [ ] Build custom pipe
     - [ ] Build custom directive
