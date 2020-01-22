@@ -6,6 +6,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import { ResponsiveVideoBlockComponent } from './responsive-video-block/responsive-video-block.component';
 
 @NgModule({
   imports: [
@@ -17,6 +19,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatIconModule,
     MatButtonModule,
     FlexLayoutModule,
+    YouTubePlayerModule,
   ],
   exports: [
     FormsModule,
@@ -26,7 +29,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatIconModule,
     MatButtonModule,
     FlexLayoutModule,
+    YouTubePlayerModule,
+    ResponsiveVideoBlockComponent,
   ],
-  declarations: []
+  declarations: [
+    ResponsiveVideoBlockComponent,
+  ]
 })
 export class SharedModule {}
