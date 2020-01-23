@@ -7,9 +7,10 @@ import { HomeRoutingModule } from './home-routing.module';
 import { MainBannerComponent } from './main-banner/main-banner.component';
 import { VideoBlockComponent } from './video-block/video-block.component';
 import { PlatesComponent } from './plates/plates.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
-  declarations: [HomeComponent, MainBannerComponent, VideoBlockComponent, PlatesComponent],
+  declarations: [HomeComponent, MainBannerComponent, VideoBlockComponent, PlatesComponent, ContactUsComponent],
   imports: [
     CommonModule,
     SharedModule,
