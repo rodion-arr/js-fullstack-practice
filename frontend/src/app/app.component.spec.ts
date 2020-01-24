@@ -1,15 +1,24 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
 
 describe('AppComponent', () => {
+  @Component({selector: 'app-top-menu', template: 'app-top-menu'})
+  class TopMenuComponent {}
+
+  @Component({selector: 'app-footer', template: 'app-footer'})
+  class FooterComponent {}
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        TopMenuComponent,
+        FooterComponent,
+        AppComponent,
       ],
     }).compileComponents();
   }));
@@ -20,16 +29,27 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'f'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('f');
-  });
-
-  it('should render title', () => {
+  it('should have top menu', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('f app is running!');
+    console.log(compiled);
+    expect(compiled.querySelector('app-top-menu')).toBeTruthy();
+  });
+
+  it('should have router outlet', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    console.log(compiled);
+    expect(compiled.querySelector('router-outlet')).toBeTruthy();
+  });
+
+  it('should have footer', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    console.log(compiled);
+    expect(compiled.querySelector('app-footer')).toBeTruthy();
   });
 });

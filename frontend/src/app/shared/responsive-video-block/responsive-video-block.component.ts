@@ -24,7 +24,7 @@ export class ResponsiveVideoBlockComponent implements AfterViewInit, OnDestroy, 
   constructor(private changeDetectorRef: ChangeDetectorRef) {}
 
   ngOnInit() {
-    if (window.YT) {
+    if ((window as any).YT) {
       return;
     }
 
