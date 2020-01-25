@@ -1,0 +1,35 @@
+@import "variables"
+
+.wrapper
+  border-bottom: 1px solid #eee
+
+  .top-menu
+    height: 86px
+    background-color: #fff
+    margin: 0 auto
+    max-width: $container-width
+    padding: 0
+
+    .menu-row
+      margin-left: auto
+
+      .active
+        color: $app-primary-color
+        border-top: 5px solid $app-primary-color
+
+      &.small
+        display: none
+
+        &.opened
+          display: block
+          position: absolute
+          left: 0
+          top: 86px
+          width: 100%
+          background-color: #fff
+
+          [mat-button]
+            display: block
+
+    .hamburger-button
+      margin-left: auto

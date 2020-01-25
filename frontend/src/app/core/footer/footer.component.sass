@@ -1,0 +1,60 @@
+@import "variables"
+
+.footer
+  padding-top: 30px
+  background-color: $footer-primary-color
+
+  h5
+    color: $footer-heading-color
+    font-size: 1.2em
+    padding-left: 15px
+    margin: 0
+
+  ul.regular
+    list-style: none
+
+    li
+      background: url('/assets/img/white-arrow.png') no-repeat 0 5px
+      padding-left: 15px
+      margin-top: 5px
+      margin-left: 0
+
+      &.active
+        text-decoration: underline
+        font-weight: bold
+        color: $footer-primary-text-color
+
+      a
+        color: $footer-primary-text-color
+        text-decoration: initial
+        &:hover
+          color: $footer-primary-text-hover-color
+
+
+  ul.social-links
+    list-style: none
+    color: #fff
+    padding: 0
+    margin: 0
+    width: intrinsic
+    width: -moz-max-content
+    width: -webkit-max-content
+
+    li
+      min-width: 50px
+
+    mat-icon
+      color: #fff
+
+  .footer-col-3
+    padding-left: 15px
+    margin-bottom: 5px
+
+  .very-bottom
+    background-color: $footer-secondary-color
+    padding-top: 15px
+    color: $footer-secondary-text-color
+
+    p
+      padding-bottom: 20px
+      padding-left: 10px
