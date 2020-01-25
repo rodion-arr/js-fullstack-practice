@@ -18,8 +18,8 @@ docker-compose exec frontend ng e2e --port 4202
 - [x] Module organization: core, shared, feature - [#3](https://github.com/rodion-arr/js-fullstack-practice/pull/3)
 - [ ] Templates 
     - [x] Angular Material - [#2](https://github.com/rodion-arr/js-fullstack-practice/pull/2)
-    - [ ] Angular Flex
-    - [ ] SASS for styling
+    - [x] Angular Flex - [example - plates.component.html](https://github.com/rodion-arr/js-fullstack-practice/blob/master/frontend/src/app/home/plates/plates.component.html)
+    - [x] SASS for styling - [example - footer.component.sass](https://github.com/rodion-arr/js-fullstack-practice/blob/master/frontend/src/app/core/footer/footer.component.sass)
     - [ ] Build custom pipe
     - [ ] Build custom directive
 - [ ] Routing
@@ -32,7 +32,7 @@ docker-compose exec frontend ng e2e --port 4202
     - [ ] HttpClient for all async call
     - [ ] Build HttpInterceptor   
 - [ ] Unit tests
-    - [ ] Karma
+    - [x] Karma, Jasmine - [example with Material BreakpointObserver mock - footer.component.sass](https://github.com/rodion-arr/js-fullstack-practice/blob/master/frontend/src/app/core/top-menu/top-menu.component.spec.ts)
 
 ## Backend 
 - [ ] NodeJs API
