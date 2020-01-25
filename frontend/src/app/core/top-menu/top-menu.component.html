@@ -16,13 +16,15 @@
     </mat-menu>
 
     <button
+      id="mobile-menu-button"
       type="button"
       aria-label="Toggle sidenav"
       mat-icon-button
       *ngIf="isSmallScreen$ | async"
       class="hamburger-button"
+      (click)="triggerHamburgerMenu()"
     >
-      <mat-icon aria-label="Side nav toggle icon" (click)="triggerHamburgerMenu()">menu</mat-icon>
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
   </mat-toolbar>
 </div>

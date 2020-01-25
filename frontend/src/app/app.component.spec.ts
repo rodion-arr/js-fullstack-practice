@@ -33,7 +33,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    console.log(compiled);
     expect(compiled.querySelector('app-top-menu')).toBeTruthy();
   });
 
@@ -41,7 +40,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    console.log(compiled);
     expect(compiled.querySelector('router-outlet')).toBeTruthy();
   });
 
@@ -49,7 +47,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    console.log(compiled);
     expect(compiled.querySelector('app-footer')).toBeTruthy();
   });
 });

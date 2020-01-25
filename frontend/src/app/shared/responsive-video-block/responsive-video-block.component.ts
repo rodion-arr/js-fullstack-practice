@@ -25,7 +25,7 @@ export class ResponsiveVideoBlockComponent implements AfterViewInit, OnDestroy, 
 
   ngOnInit() {
     if ((window as any).YT) {
-      return;
+      return false;
     }
 
     // This code loads the IFrame Player API code asynchronously, according to the instructions at
