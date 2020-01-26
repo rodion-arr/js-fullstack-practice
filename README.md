@@ -1,4 +1,5 @@
 # Full stack JS practice project
+![](https://github.com/rodion-arr/js-fullstack-practice/workflows/.github/workflows/frontend.yml/badge.svg)
 A project for practice Fullstack JS technologies
 
 Run project locally (tested on Docker Desktop v19)
