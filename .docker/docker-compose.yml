@@ -4,8 +4,8 @@ services:
   frontend:
     container_name: frontend
     build:
-      context: ../frontend
-      dockerfile: ../.docker/frontend/Dockerfile
+      context: ../
+      dockerfile: ./.docker/frontend/Dockerfile
     volumes:
       - '../frontend:/app'
       - '/app/node_modules'

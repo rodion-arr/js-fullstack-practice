@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  frontend:
+    container_name: frontend-prod
+    build:
+      dockerfile: ./.docker/frontend/Dockerfile.prod
+    volumes: []
+    ports:
+      - '80:80'
