@@ -1,6 +1,12 @@
 name: Frontend
 
-on: [push]
+on:
+  push:
+    paths:
+      - 'frontend/**'
+  pull_request:
+    paths:
+      - 'frontend/**'
 
 jobs:
   build:
@@ -12,4 +18,4 @@ jobs:
     - name: Build fronternd image
       run: |
         cd ".docker"
-        docker-compose build frontend
+        docker-compose -f docker-compose.yml -f docker-compose.prod.yml build frontend

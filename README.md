@@ -4,6 +4,8 @@
 
 A project for practice Fullstack JS technologies
 
+## How to run
+### Development run
 Run project locally (tested on Docker Desktop v19)
 ```bash
 cd ".docker"
@@ -16,6 +18,16 @@ Run frontend tests
 docker-compose exec frontend ng test --watch=false
 docker-compose exec frontend ng e2e --port 4202
 ```
+
+### Production run
+```bash
+cd ".docker"
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+open http://localhost
+```
+
+Unit tests will be run automatically during docker image build
+
 ## Frontend 
 - [ ] Smart containers/Dummy components pattern 
 - [x] Module organization: core, shared, feature - [#3](https://github.com/rodion-arr/js-fullstack-practice/pull/3)
@@ -35,7 +47,7 @@ docker-compose exec frontend ng e2e --port 4202
     - [ ] HttpClient for all async call
     - [ ] Build HttpInterceptor   
 - [ ] Unit tests
-    - [x] Karma, Jasmine - [example with Material BreakpointObserver mock - footer.component.sass](https://github.com/rodion-arr/js-fullstack-practice/blob/master/frontend/src/app/core/top-menu/top-menu.component.spec.ts)
+    - [x] Karma, Jasmine - [example with Material BreakpointObserver mock - top-menu.component.spec.ts](https://github.com/rodion-arr/js-fullstack-practice/blob/master/frontend/src/app/core/top-menu/top-menu.component.spec.ts)
 
 ## Backend 
 - [ ] NodeJs API
