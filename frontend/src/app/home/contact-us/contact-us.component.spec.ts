@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactUsComponent } from './contact-us.component';
 import { MatIconModule } from '@angular/material/icon';
+import { ReverseStringPipe } from '../../shared/reverse-string.pipe';
 
 describe('ContactUsComponent', () => {
   let component: ContactUsComponent;
@@ -12,7 +13,7 @@ describe('ContactUsComponent', () => {
       imports: [
         MatIconModule,
       ],
-      declarations: [ ContactUsComponent ]
+      declarations: [ ContactUsComponent, ReverseStringPipe ]
     })
     .compileComponents();
   }));
@@ -25,5 +26,12 @@ describe('ContactUsComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should show contact us button', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    const header = compiled.querySelector('button[mat-raised-button]');
+    expect(header).toBeTruthy();
+    expect(header.textContent).toBe('email Join us');
   });
 });

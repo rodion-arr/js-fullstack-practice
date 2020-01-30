@@ -1,6 +1,6 @@
 # Full stack JS practice project
 
-![Frontend](https://github.com/rodion-arr/js-fullstack-practice/workflows/Frontend/badge.svg)
+[![Frontend](https://github.com/rodion-arr/js-fullstack-practice/workflows/Frontend/badge.svg)](https://github.com/rodion-arr/js-fullstack-practice/actions?query=workflow%3AFrontend)
 
 A project for practice Fullstack JS technologies
 
@@ -35,7 +35,7 @@ Unit tests will be run automatically during docker image build
     - [x] Angular Material - [#2](https://github.com/rodion-arr/js-fullstack-practice/pull/2)
     - [x] Angular Flex - [example - plates.component.html](https://github.com/rodion-arr/js-fullstack-practice/blob/master/frontend/src/app/home/plates/plates.component.html)
     - [x] SASS for styling - [example - footer.component.sass](https://github.com/rodion-arr/js-fullstack-practice/blob/master/frontend/src/app/core/footer/footer.component.sass)
-    - [ ] Build custom pipe
+    - [x] Build custom pipe - [#13](https://github.com/rodion-arr/js-fullstack-practice/pull/13)
     - [ ] Build custom directive
 - [ ] Routing
     - [ ] Lazy loaded modules

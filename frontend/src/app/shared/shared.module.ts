@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { ResponsiveVideoBlockComponent } from './responsive-video-block/responsive-video-block.component';
+import { ReverseStringPipe } from './reverse-string.pipe';
 
 @NgModule({
   imports: [
@@ -31,9 +32,11 @@ import { ResponsiveVideoBlockComponent } from './responsive-video-block/responsi
     FlexLayoutModule,
     YouTubePlayerModule,
     ResponsiveVideoBlockComponent,
+    ReverseStringPipe,
   ],
   declarations: [
     ResponsiveVideoBlockComponent,
+    ReverseStringPipe,
   ]
 })
 export class SharedModule {}
