@@ -31,12 +31,12 @@ Unit tests will be run automatically during docker image build
 ## Frontend 
 - [ ] Smart containers/Dummy components pattern 
 - [x] Module organization: core, shared, feature - [#3](https://github.com/rodion-arr/js-fullstack-practice/pull/3)
-- [ ] Templates 
+- [x] Templates 
     - [x] Angular Material - [#2](https://github.com/rodion-arr/js-fullstack-practice/pull/2)
     - [x] Angular Flex - [example - plates.component.html](https://github.com/rodion-arr/js-fullstack-practice/blob/master/frontend/src/app/home/plates/plates.component.html)
     - [x] SASS for styling - [example - footer.component.sass](https://github.com/rodion-arr/js-fullstack-practice/blob/master/frontend/src/app/core/footer/footer.component.sass)
     - [x] Build custom pipe - [#13](https://github.com/rodion-arr/js-fullstack-practice/pull/13)
-    - [ ] Build custom directive
+    - [x] Build custom directive - [#14](https://github.com/rodion-arr/js-fullstack-practice/pull/14)
 - [ ] Routing
     - [ ] Lazy loaded modules
     - [ ] Route guard

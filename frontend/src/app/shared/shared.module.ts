@@ -9,6 +9,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { ResponsiveVideoBlockComponent } from './responsive-video-block/responsive-video-block.component';
 import { ReverseStringPipe } from './reverse-string.pipe';
+import { BorderStyleDirective } from './border-style.directive';
 
 @NgModule({
   imports: [
@@ -33,10 +34,12 @@ import { ReverseStringPipe } from './reverse-string.pipe';
     YouTubePlayerModule,
     ResponsiveVideoBlockComponent,
     ReverseStringPipe,
+    BorderStyleDirective,
   ],
   declarations: [
     ResponsiveVideoBlockComponent,
     ReverseStringPipe,
+    BorderStyleDirective,
   ]
 })
 export class SharedModule {}
