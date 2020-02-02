@@ -3,20 +3,20 @@
     <div class="footer-menu primary" fxFlex>
       <h5>Menu</h5>
       <ul class="regular">
-        <li class="active">
-          <span>Main</span>
+        <li >
+          <a [routerLink]="['/home']" routerLinkActive="active">Main</a>
         </li>
-        <li class="">
-          <a href="#">About</a>
+        <li>
+          <a [routerLink]="['/static/about']" routerLinkActive="active">About</a>
         </li>
-        <li class="">
-          <a href="#">Products</a>
+        <li >
+          <a [routerLink]="['/products']" routerLinkActive="active">Products</a>
         </li>
-        <li class="">
-          <a href="#">Events</a>
+        <li>
+          <a [routerLink]="['/events']" routerLinkActive="active">Events</a>
         </li>
-        <li class="">
-          <a href="#">Contacts</a>
+        <li>
+          <a [routerLink]="['/static/contacts']" routerLinkActive="active">Contacts</a>
         </li>
       </ul>
     </div>

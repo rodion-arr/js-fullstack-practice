@@ -38,7 +38,7 @@ Unit tests will be run automatically during docker image build
     - [x] Build custom pipe - [#13](https://github.com/rodion-arr/js-fullstack-practice/pull/13)
     - [x] Build custom directive - [#14](https://github.com/rodion-arr/js-fullstack-practice/pull/14)
 - [ ] Routing
-    - [ ] Lazy loaded modules
+    - [x] Lazy loaded modules - [#16](https://github.com/rodion-arr/js-fullstack-practice/pull/16)
     - [ ] Route guard
     - [ ] Route resolver
 - [ ] Async operations
