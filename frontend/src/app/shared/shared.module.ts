@@ -13,6 +13,8 @@ import { BorderStyleDirective } from './border-style.directive';
 import { ConfirmPopupComponent } from './confirm-popup/confirm-popup.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { A11yModule } from '@angular/cdk/a11y';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   imports: [
@@ -25,6 +27,8 @@ import { A11yModule } from '@angular/cdk/a11y';
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
     FlexLayoutModule,
     YouTubePlayerModule,
   ],
@@ -37,6 +41,8 @@ import { A11yModule } from '@angular/cdk/a11y';
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
     FlexLayoutModule,
     YouTubePlayerModule,
     ResponsiveVideoBlockComponent,
