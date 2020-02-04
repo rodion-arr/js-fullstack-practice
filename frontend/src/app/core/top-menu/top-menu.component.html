@@ -1,6 +1,6 @@
 <div class="wrapper">
   <mat-toolbar class="top-menu">
-    <img class="logo" src="assets/img/logo.png" alt="Logo">
+    <a [routerLink]="['/home']"><img class="logo" src="assets/img/logo.png" alt="Logo"></a>
 
     <div class="menu-row" [ngClass]="{'small': (isSmallScreen$ | async), 'opened': isHamburgerMenuOpened}">
       <a mat-button [routerLink]="['/home']" routerLinkActive="active">Home</a>

@@ -1,1 +1,63 @@
-<p>contacts works!</p>
+<div class="container">
+  <div class="contacts-wrapper"
+       fxLayout="row wrap"
+       fxLayoutGap="10px"
+       fxLayoutAlign="space-between">
+    <div class="contacts-sidebar"
+         fxFlex="1 1 calc(30% - 10px)"
+         fxFlex.lt-sm="100%">
+      <div class="sidebar-inner">
+        <div class="header">
+          Contact us
+        </div>
+        <div class="contact-list">
+          <div class="contact-list-item">
+            <div class="contact-title">Phone:</div>
+            <div class="contact-value"><a href="#">+0000000000</a></div>
+          </div>
+          <div class="contact-list-item">
+            <div class="contact-title">Mail:</div>
+            <div class="contact-value"><a href="#">mail@example.com</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-us-form"
+         fxFlex="1 1 calc(70% - 10px)"
+         fxFlex.lt-sm="100%">
+      <div class="header">
+        Send us a message!
+      </div>
+      <div fxLayout="row wrap"
+           fxLayoutGap="20px grid"
+           fxLayoutAlign="space-between">
+        <mat-form-field fxFlex="1 1 calc(50% - 20px)" fxFlex.lt-sm="100%">
+          <input matInput placeholder="Your name">
+        </mat-form-field>
+
+        <mat-form-field fxFlex="1 1 calc(50% - 20px)" fxFlex.lt-sm="100%">
+          <input matInput placeholder="Your email">
+        </mat-form-field>
+      </div>
+
+      <div class="mat-field-wrapper"
+           fxLayout="row"
+           fxLayoutGap="20px grid"
+           fxLayoutAlign="space-between">
+        <mat-form-field fxFlex.lt-sm="1 1 100%" class="full-width">
+          <textarea matInput placeholder="Your message" matTextareaAutosize></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="mat-field-wrapper"
+        fxLayout="row"
+           fxLayoutGap="20px"
+           fxLayoutAlign="space-between">
+        <div fxFlex.lt-sm="100%">
+          <button mat-raised-button color="primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
