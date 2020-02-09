@@ -15,7 +15,7 @@ import {
 })
 export class ResponsiveVideoBlockComponent implements AfterViewInit, OnDestroy, OnInit {
 
-  @ViewChild('youTubePlayerWrapper', {static: false}) youTubePlayerWrapper: ElementRef<HTMLDivElement>;
+  @ViewChild('youTubePlayerWrapper') youTubePlayerWrapper: ElementRef<HTMLDivElement>;
 
   @Input() videoId: string;
   videoWidth: number | undefined;
