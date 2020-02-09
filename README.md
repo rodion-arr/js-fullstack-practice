@@ -48,6 +48,8 @@ Unit tests will be run automatically during docker image build
     - [ ] Build HttpInterceptor   
 - [ ] Unit tests
     - [x] Karma, Jasmine - [example with Material BreakpointObserver mock - top-menu.component.spec.ts](https://github.com/rodion-arr/js-fullstack-practice/blob/master/frontend/src/app/core/top-menu/top-menu.component.spec.ts)
+- [ ] Keeping up-to-date
+    - [x] Upgrade to Angular 9 - [#29](https://github.com/rodion-arr/js-fullstack-practice/pull/29)
 
 ## Backend 
 - [ ] NodeJs API
