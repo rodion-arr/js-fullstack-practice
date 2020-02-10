@@ -4,10 +4,14 @@ import { ContactsComponent } from './contacts.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Component } from '@angular/core';
 
 describe('ContactsComponent', () => {
   let component: ContactsComponent;
   let fixture: ComponentFixture<ContactsComponent>;
+
+  @Component({selector: 'app-contact-form', template: 'app-contact-form'})
+  class ContactFormComponent {}
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -16,7 +20,7 @@ describe('ContactsComponent', () => {
         MatFormFieldModule,
         BrowserAnimationsModule,
       ],
-      declarations: [ ContactsComponent ]
+      declarations: [ ContactsComponent, ContactFormComponent ]
     })
     .compileComponents();
   }));

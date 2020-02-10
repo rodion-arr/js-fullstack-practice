@@ -37,6 +37,7 @@ Unit tests will be run automatically during docker image build
     - [x] SASS for styling - [example - footer.component.sass](https://github.com/rodion-arr/js-fullstack-practice/blob/master/frontend/src/app/core/footer/footer.component.sass)
     - [x] Build custom pipe - [#13](https://github.com/rodion-arr/js-fullstack-practice/pull/13)
     - [x] Build custom directive - [#14](https://github.com/rodion-arr/js-fullstack-practice/pull/14)
+    - [x] Reactive forms - [#30](https://github.com/rodion-arr/js-fullstack-practice/pull/30)
 - [ ] Routing
     - [x] Lazy loaded modules - [#16](https://github.com/rodion-arr/js-fullstack-practice/pull/16)
     - [x] Route guard - [#18](https://github.com/rodion-arr/js-fullstack-practice/pull/18)

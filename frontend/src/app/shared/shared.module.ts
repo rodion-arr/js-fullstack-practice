@@ -15,6 +15,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { A11yModule } from '@angular/cdk/a11y';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   imports: [
@@ -29,6 +31,7 @@ import { MatInputModule } from '@angular/material/input';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSnackBarModule,
     FlexLayoutModule,
     YouTubePlayerModule,
   ],
@@ -43,18 +46,21 @@ import { MatInputModule } from '@angular/material/input';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSnackBarModule,
     FlexLayoutModule,
     YouTubePlayerModule,
     ResponsiveVideoBlockComponent,
     ReverseStringPipe,
     BorderStyleDirective,
     ConfirmPopupComponent,
+    ContactFormComponent,
   ],
   declarations: [
     ResponsiveVideoBlockComponent,
     ReverseStringPipe,
     BorderStyleDirective,
     ConfirmPopupComponent,
+    ContactFormComponent,
   ],
   entryComponents: [ConfirmPopupComponent]
 })

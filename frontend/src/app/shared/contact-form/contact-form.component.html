@@ -1,0 +1,32 @@
+
+<form [formGroup]="contactForm">
+  <div fxLayout="row wrap"
+       fxLayoutGap="20px grid"
+       fxLayoutAlign="space-between">
+    <mat-form-field fxFlex="1 1 calc(50% - 20px)" fxFlex.lt-sm="100%">
+      <input matInput placeholder="Your name" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field fxFlex="1 1 calc(50% - 20px)" fxFlex.lt-sm="100%">
+      <input matInput placeholder="Your email" formControlName="email">
+    </mat-form-field>
+  </div>
+
+  <div class="mat-field-wrapper"
+       fxLayout="row"
+       fxLayoutGap="20px grid"
+       fxLayoutAlign="space-between">
+    <mat-form-field fxFlex.lt-sm="1 1 100%" class="full-width">
+      <textarea matInput placeholder="Your message" matTextareaAutosize formControlName="message"></textarea>
+    </mat-form-field>
+  </div>
+
+  <div class="mat-field-wrapper"
+       fxLayout="row"
+       fxLayoutGap="20px"
+       fxLayoutAlign="space-between">
+    <div fxFlex.lt-sm="100%">
+      <button mat-raised-button color="primary" (click)="sendContactForm()">Submit</button>
+    </div>
+  </div>
+</form>
