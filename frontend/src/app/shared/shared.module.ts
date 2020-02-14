@@ -17,6 +17,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   imports: [
@@ -32,6 +34,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     MatFormFieldModule,
     MatInputModule,
     MatSnackBarModule,
+    MatSidenavModule,
+    MatListModule,
     FlexLayoutModule,
     YouTubePlayerModule,
   ],
@@ -47,6 +51,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     MatFormFieldModule,
     MatInputModule,
     MatSnackBarModule,
+    MatSidenavModule,
+    MatListModule,
     FlexLayoutModule,
     YouTubePlayerModule,
     ResponsiveVideoBlockComponent,
