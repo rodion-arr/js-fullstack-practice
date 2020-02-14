@@ -44,6 +44,7 @@ Unit tests will be run automatically during docker image build
     - [ ] Route resolver
 - [ ] Async operations
     - [ ] NgRx for store
+        - [x] Dedicated Store module - [#31](https://github.com/rodion-arr/js-fullstack-practice/pull/31)
         - [ ] CRUD with entities
     - [ ] HttpClient for all async call
     - [ ] Build HttpInterceptor   
