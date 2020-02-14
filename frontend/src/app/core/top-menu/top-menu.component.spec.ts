@@ -20,7 +20,7 @@ describe('TopMenuComponent', () => {
   ];
   const fakeObserve = (s: string[]): Observable<BreakpointState> => from(matchObj).pipe(
     filter(match => match.matchStr === s[0]),
-    map(match => <BreakpointState> { matches: match.result, breakpoints: {} })
+    map(match => ({ matches: match.result, breakpoints: {} }) as BreakpointState)
   );
   const bpSpy = jasmine.createSpyObj('BreakpointObserver', ['observe']);
   bpSpy.observe.and.callFake(fakeObserve);
