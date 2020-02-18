@@ -5,6 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Component } from '@angular/core';
+import { provideMockStore } from '@ngrx/store/testing';
 
 describe('ContactsComponent', () => {
   let component: ContactsComponent;
@@ -20,7 +21,10 @@ describe('ContactsComponent', () => {
         MatFormFieldModule,
         BrowserAnimationsModule,
       ],
-      declarations: [ ContactsComponent, ContactFormComponent ]
+      declarations: [ ContactsComponent, ContactFormComponent ],
+      providers: [
+        provideMockStore()
+      ]
     })
     .compileComponents();
   }));
