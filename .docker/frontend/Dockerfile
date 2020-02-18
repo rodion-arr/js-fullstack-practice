@@ -16,7 +16,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY ./frontend/package.json /app/package.json
 COPY ./frontend/package-lock.json /app/package-lock.json
 RUN npm install
-RUN npm install -g @angular/cli@7.3.9
+RUN npm install -g @angular/cli
 
 # add app
 COPY ./frontend/ /app
