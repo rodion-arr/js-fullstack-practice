@@ -16,5 +16,10 @@ export function reducer(
       case AppActions.SET_PAGE_SUBTITLE: {
         return { ...state, pageSubtitle: action.payload };
       }
+
+      case AppActions.RESET_PAGE_SUBTITLE: {
+        return { ...state, pageSubtitle: initialState.pageSubtitle };
+      }
     }
+    return state;
 }

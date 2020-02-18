@@ -19,6 +19,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { SubTitleComponent } from './sub-title/sub-title.component';
 
 @NgModule({
   imports: [
@@ -60,6 +61,7 @@ import { MatListModule } from '@angular/material/list';
     BorderStyleDirective,
     ConfirmPopupComponent,
     ContactFormComponent,
+    SubTitleComponent,
   ],
   declarations: [
     ResponsiveVideoBlockComponent,
@@ -67,6 +69,7 @@ import { MatListModule } from '@angular/material/list';
     BorderStyleDirective,
     ConfirmPopupComponent,
     ContactFormComponent,
+    SubTitleComponent,
   ],
   entryComponents: [ConfirmPopupComponent]
 })

@@ -1,16 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AboutComponent } from './about.component';
+import { SubTitleComponent } from './sub-title.component';
 import { provideMockStore } from '@ngrx/store/testing';
 
-
-describe('AboutComponent', () => {
-  let component: AboutComponent;
-  let fixture: ComponentFixture<AboutComponent>;
+describe('SubTitleComponent', () => {
+  let component: SubTitleComponent;
+  let fixture: ComponentFixture<SubTitleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AboutComponent ],
+      declarations: [ SubTitleComponent ],
       providers: [
         provideMockStore()
       ]
@@ -19,7 +18,7 @@ describe('AboutComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AboutComponent);
+    fixture = TestBed.createComponent(SubTitleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -10,6 +10,9 @@ describe('AppComponent', () => {
   @Component({selector: 'app-footer', template: 'app-footer'})
   class FooterComponent {}
 
+  @Component({selector: 'app-sub-title', template: 'app-sub-title'})
+  class SubTitleComponent {}
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
@@ -18,6 +21,7 @@ describe('AppComponent', () => {
       declarations: [
         TopMenuComponent,
         FooterComponent,
+        SubTitleComponent,
         AppComponent,
       ],
     }).compileComponents();

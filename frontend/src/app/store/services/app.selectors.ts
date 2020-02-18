@@ -16,7 +16,9 @@ const getPageSubtitle = createSelector(
   (state: AppState) => state.pageSubtitle
 );
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class AppSelectors {
 
   constructor(private store: Store<EntityState>) {}
