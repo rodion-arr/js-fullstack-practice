@@ -11,3 +11,14 @@ services:
       - '/app/node_modules'
     ports:
       - '4200:4200'
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb_fullstack_project
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data_fullstack_project:/data/db
+
+volumes:
+  mongodb_data_fullstack_project:
