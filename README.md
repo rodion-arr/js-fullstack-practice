@@ -58,6 +58,7 @@ Unit tests will be run automatically during docker image build
 - [ ] Express
 - [ ] TypeScript
 - [ ] MongoDB
+    - [ ] DB Migrations
 - [ ] Auth
 
 ## DevOps
