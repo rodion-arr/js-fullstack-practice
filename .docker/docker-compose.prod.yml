@@ -8,3 +8,5 @@ services:
     volumes: []
     ports:
       - '80:80'
+  mongodb:
+    container_name: mongodb-prod
