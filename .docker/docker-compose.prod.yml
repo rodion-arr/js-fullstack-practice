@@ -8,5 +8,14 @@ services:
     volumes: []
     ports:
       - '80:80'
+
+  backend:
+    container_name: backend-prod
+    build:
+      dockerfile: ./.docker/backend/Dockerfile.prod
+    volumes: []
+    ports:
+      - '3000:3000'
+
   mongodb:
     container_name: mongodb-prod
