@@ -12,6 +12,18 @@ services:
     ports:
       - '4200:4200'
 
+  backend:
+    container_name: backend
+    build:
+      context: ../
+      dockerfile: ./.docker/backend/Dockerfile
+    volumes:
+      - '../backend:/app'
+      - '/app/node_modules'
+    ports:
+      - '3000:3000'
+      - '9229:9229'
+
   mongodb:
     image: mongo:latest
     container_name: mongodb_fullstack_project
