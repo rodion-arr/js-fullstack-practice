@@ -56,7 +56,7 @@ Unit tests will be run automatically during docker image build
 ## Backend 
 - [ ] NodeJs API
 - [ ] Express
-- [ ] TypeScript [#39](https://github.com/rodion-arr/js-fullstack-practice/pull/39)
+- [x] TypeScript [#39](https://github.com/rodion-arr/js-fullstack-practice/pull/39)
 - [ ] MongoDB [#35](https://github.com/rodion-arr/js-fullstack-practice/pull/35)
     - [ ] DB Migrations
 - [ ] Auth
@@ -64,12 +64,12 @@ Unit tests will be run automatically during docker image build
 ## DevOps
 - [ ] Use docker containers 
     - [x] Frontend image for development - [#1](https://github.com/rodion-arr/js-fullstack-practice/pull/1)
-    - [ ] Backend image for development
+    - [x] Backend image for development - [NodeJS in container](/.docker/backend/Dockerfile)
 - [ ] CI
     - [x] Setup GitHub actions - [#10](https://github.com/rodion-arr/js-fullstack-practice/pull/10)
     - [x] Run tests - [Running in docker build](/.docker/frontend/Dockerfile.prod#L29)
     - [ ] Publish coverage report
 - [ ] CD
     - [x] Frontend image for deployment - [Production Docker image](/.docker/frontend/Dockerfile.prod)
-    - [ ] Backend images for deployment
+    - [x] Backend images for deployment - [Production NodeJS Docker image](/.docker/backend/Dockerfile.prod)
     - [ ] Push to dockerhub 
