@@ -10,7 +10,8 @@ A project for practice Fullstack JS technologies
 Run project locally (tested on Docker Desktop v19)
 ```bash
 cd ".docker"
-docker-compose up -d
+docker-compose up -d #run project services
+migrate-mongo up #run migrations
 open http://localhost:4200
 ```
 
