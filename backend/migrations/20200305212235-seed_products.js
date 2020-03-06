@@ -187,8 +187,8 @@ const initialProductList = [
     shortTitle: "ZinoBiotic",
     fullTitle: "Zinzino ZinoBiotic",
     detailSubtitle: null,
-    previewImage: "/assets/img/products/zinobiotic-all.png",
-    detailImage: "/assets/img/products/zinobiotic.png",
+    previewImage: "/assets/img/products/zinobiotic-all.jpg",
+    detailImage: "/assets/img/products/zinobiotic.jpg",
     detailImageSecondary: null,
     detailText: `<ul class="usp-list">
 <li>Supporting the growth of friendly bacteria</li>
@@ -214,8 +214,8 @@ const initialProductList = [
     shortTitle: "Viva",
     fullTitle: "Zinzino Viva",
     detailSubtitle: null,
-    previewImage: "/assets/img/products/viva-all.png",
-    detailImage: "/assets/img/products/viva.png",
+    previewImage: "/assets/img/products/viva-all.jpg",
+    detailImage: "/assets/img/products/viva.jpg",
     detailImageSecondary: null,
     detailText: `<ul class="usp-list">
 <li>Supports a normal&nbsp;nervous system and helps to relieve ordinary stress<sup>1</sup></li>

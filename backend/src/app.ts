@@ -2,9 +2,10 @@ import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import bluebird from "bluebird";
+import path from "path";
 
 // Controllers (route handlers)
-import * as apiController from "./controllers/api";
+import * as productsController from "./controllers/products";
 
 // Create Express server
 const app = express();
@@ -25,9 +26,11 @@ app.set("port", process.env.PORT || 3000);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(express.static(path.join(__dirname, "public")));
+
 /**
  * API examples routes.
  */
-app.get("/api", apiController.getApi);
+app.get("/products", productsController.getProducts);
 
 export default app;
