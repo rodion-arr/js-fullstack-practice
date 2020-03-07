@@ -21,8 +21,16 @@
   },
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "@types/mongoose": "^5.7.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "migrate-mongo": "^7.1.0",
+    "mongoose": "^5.9.3",
+    "winston": "^3.2.1"
+  },
   "devDependencies": {
-    "@types/bluebird": "^3.5.30",
     "@types/body-parser": "^1.19.0",
     "@types/concurrently": "^5.1.0",
     "@types/eslint": "^6.1.8",
@@ -44,15 +52,5 @@
     "ts-node": "^8.6.2",
     "tslint": "^6.0.0",
     "typescript": "^3.8.3"
-  },
-  "dependencies": {
-    "@types/mongoose": "^5.7.3",
-    "bluebird": "^3.7.2",
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "express-validator": "^6.4.0",
-    "migrate-mongo": "^7.1.0",
-    "mongoose": "^5.9.3",
-    "winston": "^3.2.1"
   }
 }
