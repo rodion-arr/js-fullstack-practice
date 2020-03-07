@@ -15,8 +15,8 @@ RUN npm install
 # add app
 COPY ./backend/ /app
 
-RUN npm run build \
-npm run test
+RUN npm run build; \
+npm run test;
 
 # start app
 CMD npm run start

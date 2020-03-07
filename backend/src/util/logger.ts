@@ -7,6 +7,7 @@ const logger: Logger = winston.createLogger({
         new winston.transports.File({ filename: 'debug.log', level: 'debug'})
     ]
 });
+
 if (process.env.NODE_ENV !== 'production') {
     logger.debug('Logging initialized at debug level');
 }
