@@ -1,4 +1,4 @@
-import * as mongoose from "mongoose";
+import * as mongoose from 'mongoose';
 
 export type ProductDocument = mongoose.Document & {
     isActive: boolean;
@@ -36,4 +36,4 @@ const productSchema = new mongoose.Schema({
     youtubeLink: String
 }, { timestamps: true });
 
-export const Product = mongoose.model<ProductDocument>("Product", productSchema);
+export const Product = mongoose.model<ProductDocument>('Product', productSchema);
