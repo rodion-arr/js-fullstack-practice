@@ -1,10 +1,10 @@
 <div class="container">
   <div class="product-list">
-    <ng-container *ngFor="let _ of [1,2,3,4,5,6,7,8,9]">
+    <ng-container *ngFor="let product of (productList$ | async).data.products">
       <div class="product-item">
-        <img class="product-image" src="https://via.placeholder.com/370x270" alt="">
+        <img class="product-image" [src]="product.previewImage" [alt]="product.shortTitle">
         <article>
-          <div class="product-name">Product name</div>
+          <div class="product-name">{{product.shortTitle}}</div>
           <mat-icon>link</mat-icon>
         </article>
       </div>
