@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideMockStore } from '@ngrx/store/testing';
+import { MatIconModule } from '@angular/material/icon';
 
 import { ProductsListComponent } from './products-list.component';
 
@@ -10,6 +11,9 @@ describe('ProductsListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ProductsListComponent ],
+      imports: [
+        MatIconModule
+      ],
       providers: [
         provideMockStore()
       ]
