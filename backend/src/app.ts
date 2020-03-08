@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import path from 'path';
 import logger from './util/logger';
+import cors from 'cors';
 
 // Controllers (route handlers)
 import * as productsController from './controllers/products';
@@ -21,6 +22,7 @@ mongoose.connect(mongoUrl, { useNewUrlParser: true, useCreateIndex: true, useUni
 
 // Express configuration
 app.set('port', process.env.PORT || 3000);
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
