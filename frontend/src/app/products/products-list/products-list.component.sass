@@ -1,0 +1,46 @@
+.product-list
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-row-gap: 20px
+  grid-column-gap: 20px
+  margin: 30px auto 30px
+  justify-items: center
+
+  @media only screen and (max-width: 1200px)
+    &
+      .product-image
+        width: 300px
+
+  @media only screen and (max-width: 940px)
+    &
+      .product-image
+        width: 228px
+
+  @media only screen and (max-width: 750px)
+    &
+      grid-template-columns: 1fr
+
+      .product-image
+        width: auto
+
+  .product-item
+    position: relative
+
+    article
+      opacity: 0
+      transition: opacity .2s linear 0.2s
+      position: absolute
+      top: 0
+      width: 100%
+      height: 100%
+      background: rgba(0, 0, 0, .5)
+      color: #ffffff
+      font-size: 1.5em
+      cursor: pointer
+      text-align: center
+
+      .product-name
+        margin-top: 33%
+
+      &:hover
+        opacity: 1
