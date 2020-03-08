@@ -5,15 +5,10 @@
     <div class="menu-row" [ngClass]="{'small': (isSmallScreen$ | async), 'opened': isHamburgerMenuOpened}">
       <a mat-button [routerLink]="['/home']" routerLinkActive="active">Home</a>
       <a mat-button [routerLink]="['/static/about']" routerLinkActive="active">About</a>
-      <a mat-button [matMenuTriggerFor]="productsMenu">Products</a>
+      <a mat-button [routerLink]="['/products']" routerLinkActive="active">Products</a>
       <a mat-button [routerLink]="['/events']" routerLinkActive="active">Events</a>
       <a mat-button [routerLink]="['/static/contacts']" routerLinkActive="active">Contact Us</a>
     </div>
-
-    <mat-menu #productsMenu="matMenu" yPosition="below" xPosition="after">
-      <a mat-menu-item>Item 1</a>
-      <a mat-menu-item>Item 2</a>
-    </mat-menu>
 
     <button
       id="mobile-menu-button"
