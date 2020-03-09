@@ -1,6 +1,6 @@
 <div class="container">
   <div class="product-list">
-    <ng-container *ngFor="let product of (productList$ | async).data.products">
+    <ng-container *ngFor="let product of (products$ | async)">
       <div class="product-item">
         <img class="product-image" [src]="product.previewImage" [alt]="product.shortTitle">
         <article>

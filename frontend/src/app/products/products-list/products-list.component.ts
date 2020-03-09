@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { HttpClient } from '@angular/common/http';
-import { environment } from '../../../environments/environment';
-
-import { ResetPageSubtitle, SetPageSubtitle } from '../../store/actions';
 import { Observable } from 'rxjs';
+
+import { GetProductsList, ResetPageSubtitle, SetPageSubtitle } from '../../store/actions';
+import { Product } from '../../core/model/product';
+import { ProductsSelectors } from '../../store';
 
 @Component({
   selector: 'app-products-list',
@@ -12,13 +12,15 @@ import { Observable } from 'rxjs';
   styleUrls: ['./products-list.component.sass']
 })
 export class ProductsListComponent implements OnInit, OnDestroy {
+  products$: Observable<Product[]>;
 
-  productList$: Observable<any> = this.http.get(`${environment.apiUrl}/products`);
-
-  constructor(private store: Store, private http: HttpClient) { }
+  constructor(private store: Store, protected productsSelectors: ProductsSelectors) {
+    this.products$ = this.productsSelectors.productsList$;
+  }
 
   ngOnInit() {
     this.store.dispatch(new SetPageSubtitle('Zinzino Products'));
+    this.store.dispatch(new GetProductsList());
   }
 
   ngOnDestroy(): void {
