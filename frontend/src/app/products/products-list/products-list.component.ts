@@ -1,7 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 
-import { ResetPageSubtitle, SetPageSubtitle } from '../../store/actions';
+import { GetProductsList, ResetPageSubtitle, SetPageSubtitle } from '../../store/actions';
+import { Product } from '../../core/model/product';
+import { ProductsSelectors } from '../../store';
 
 @Component({
   selector: 'app-products-list',
@@ -9,11 +12,15 @@ import { ResetPageSubtitle, SetPageSubtitle } from '../../store/actions';
   styleUrls: ['./products-list.component.sass']
 })
 export class ProductsListComponent implements OnInit, OnDestroy {
+  products$: Observable<Product[]>;
 
-  constructor(private store: Store) { }
+  constructor(private store: Store, protected productsSelectors: ProductsSelectors) {
+    this.products$ = this.productsSelectors.productsList$;
+  }
 
   ngOnInit() {
     this.store.dispatch(new SetPageSubtitle('Zinzino Products'));
+    this.store.dispatch(new GetProductsList());
   }
 
   ngOnDestroy(): void {
