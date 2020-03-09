@@ -32,5 +32,6 @@ app.use(express.static(path.join(__dirname, 'public')));
  * API examples routes.
  */
 app.get('/products', productsController.getProducts);
+app.get('/products/:slug', productsController.getProductBySlug);
 
 export default app;
