@@ -16,6 +16,11 @@ const getProductsList = createSelector(
   (state: ProductsState) => state.productsList
 );
 
+const getActivatedProduct = createSelector(
+  getProductsState,
+  (state: ProductsState) => state.activatedProduct
+);
+
 @Injectable({
   providedIn: 'root'
 })
@@ -25,5 +30,6 @@ export class ProductsSelectors {
 
   productsState$ = this.store.pipe(select(getProductsState));
   productsList$ = this.store.pipe(select(getProductsList));
+  activatedProduct$ = this.store.pipe(select(getActivatedProduct));
 
 }

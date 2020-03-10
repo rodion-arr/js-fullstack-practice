@@ -3,7 +3,7 @@
     <ng-container *ngFor="let product of (products$ | async)">
       <div class="product-item">
         <img class="product-image" [src]="product.previewImage" [alt]="product.shortTitle">
-        <article>
+        <article [routerLink]="['/products', product.slug]">
           <div class="product-name">{{product.shortTitle}}</div>
           <mat-icon>link</mat-icon>
         </article>
