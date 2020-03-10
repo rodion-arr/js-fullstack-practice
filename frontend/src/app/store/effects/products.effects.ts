@@ -25,6 +25,18 @@ export class ProductsEffects {
         )
       )
     );
+  @Effect()
+  getActivatedProduct$: Observable<Action> = this.actions$
+    .pipe(
+      ofType(ProductsAction.GET_ACTIVATED_PRODUCT),
+      switchMap((action: ProductsAction.GetActivatedProduct) =>
+        toAction(
+          this.productsDataService.getProductBySlug(action.payload),
+          ProductsAction.GetActivatedProductSuccess,
+          ProductsAction.GetActivatedProductError
+        )
+      )
+    );
 
   constructor(
     private actions$: Actions,

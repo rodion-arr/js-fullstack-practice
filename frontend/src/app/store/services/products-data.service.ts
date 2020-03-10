@@ -29,6 +29,20 @@ export class ProductsDataService {
       );
   }
 
+  getProductBySlug(slug: string): Observable<Product> {
+    return this.http.get<any>(`${this.apiUrlBase}/products/${slug}`)
+      .pipe(
+        map(response => {
+          if (response.status) {
+            return response.data.product as Product;
+          } else {
+            throw new Error(response.message);
+          }
+        }),
+        catchError(this.handleError())
+      );
+  }
+
   private handleError<T>(requestData?: T) {
     return (res: HttpErrorResponse) => {
       const error = new DataServiceError(res.error, requestData);
