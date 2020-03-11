@@ -1,26 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
-import { GetActivatedProduct } from '../../store/actions';
-import { Observable } from 'rxjs';
+import { Subscription } from 'rxjs';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+
+import { GetActivatedProduct, ResetPageSubtitle, SetPageSubtitle } from '../../store/actions';
 import { Product } from '../../core/model/product';
-import { ProductsSelectors } from '../../store/services';
+import { ProductsSelectors } from '../../store';
 
 @Component({
   selector: 'app-products-detail',
   templateUrl: './products-detail.component.html',
   styleUrls: ['./products-detail.component.sass']
 })
-export class ProductsDetailComponent implements OnInit {
-  product$: Observable<Product>;
+export class ProductsDetailComponent implements OnInit, OnDestroy {
+  product: Product;
+  productSubscription: Subscription;
 
   constructor(
     private route: ActivatedRoute,
     private store: Store,
-    protected productsSelectors: ProductsSelectors
+    private productsSelectors: ProductsSelectors,
+    private sanitizer: DomSanitizer
   ) {
-    this.product$ = this.productsSelectors.activatedProduct$;
+    this.productSubscription = this.productsSelectors.activatedProduct$
+      .subscribe((product: Product) => {
+        this.product = product;
+        this.store.dispatch(new SetPageSubtitle(product?.fullTitle));
+      });
   }
 
   ngOnInit(): void {
@@ -31,6 +39,15 @@ export class ProductsDetailComponent implements OnInit {
       .subscribe(slug => {
         this.store.dispatch(new GetActivatedProduct(slug));
       });
+  }
+
+  ngOnDestroy(): void {
+    this.productSubscription.unsubscribe();
+    this.store.dispatch(new ResetPageSubtitle());
+  }
+
+  getDetailTextHtml(): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(this.product.detailText);
   }
 
 }
