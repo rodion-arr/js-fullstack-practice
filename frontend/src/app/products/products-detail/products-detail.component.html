@@ -1,22 +1,21 @@
-<div class="container">
+<div class="container" *ngIf="product">
   <article class="blog-post">
     <div class="post-heading">
-      <h3>Oil</h3>
+      <h3>{{product.fullTitle}}</h3>
     </div>
-    <div class="clearfix"></div>
 
-    <div class="center"><img src="https://via.placeholder.com/770x385" alt="Oil"></div>
-
-    <div class="clearfix"></div>
+    <div class="center">
+      <img [src]="product.detailImage" [alt]="product.shortTitle" class="image-responsive" />
+    </div>
 
     <div class="row">
       <div class="span8">
         <div class="priceBox special">
-          <h4 class="light">BalanceOil</h4>
+          <h4 class="light">{{product.shortTitle}}</h4>
           <hr>
-          <span class="emphasis">€ 29</span>
+          <span class="emphasis">{{product.price | currency:'EUR'}}</span>
           <hr>
-          <span>Lorem ipsum</span>
+          <span>{{product.slogan}}</span>
           <hr>
           <span class="emphasis-2">
             <button mat-raised-button color="primary">Order</button>
@@ -25,48 +24,9 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="span8">
-        <div class="post-image video-container">
-          <iframe width="270" height="135" src="https://www.youtube.com/embed/lay4OpVk7_Q?rel=0&amp;controls=0}"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-        </div>
-      </div>
-    </div>
+    <h2>{{product.fullTitle}}</h2>
 
-    <p><strong>BalanceOil</strong></p>
-    <h2>Header</h2>
-    <ul class="usp-list">
-      <li>Supports a normal&nbsp;nervous system and helps to relieve ordinary stress<sup>1</sup></li>
-      <li>Contributes to the relief of mental tiredness and fatigue<sup>1</sup></li>
-      <li>Helps promote a positive mood<sup>1</sup></li>
-      <li>Supports normal mental performance<sup>1</sup></li>
-      <li>Supports normal cognitive function<sup>1</sup></li>
-    </ul>
-    <strong><strong><strong>AFFRON® -&nbsp;</strong></strong>THE NEW GENERATION SAFFRON EXTRACT</strong><br>Viva's key
-    ingredient is saffron extract. Since&nbsp;most of the harvesting and processing work of Saffron is done by hand,
-    this
-    is one of the most expensive spices in the world. The process of producing Viva starts with the highest quality
-    Spanish saffron stigmas, Affron®.&nbsp;Affron® is extracted using a proprietary high-tech process that eliminates
-    microbiological contamination and improves the profile of bioactive components. Affron® is standardized to the
-    bioactive compound Lepticrosalides® (Lopresti &amp; Drummond, 2016) by High-Performance Liquid Chromatography
-    (HPLC),
-    a process where each bioactive substance is identified and quantified.<strong><br><br></strong>
+    <div [innerHTML]="getDetailTextHtml()"></div>
 
-    <div class="row">
-      <div class="span8">
-        <div class="priceBox special">
-          <h4 class="light">BalanceOil</h4>
-          <hr>
-          <span class="emphasis">€ 29</span>
-          <hr>
-          <span>Lorem ipsum</span>
-          <hr>
-          <span class="emphasis-2">
-            <button mat-raised-button color="primary">Order</button>
-        </span>
-        </div>
-      </div>
-    </div>
   </article>
 </div>
