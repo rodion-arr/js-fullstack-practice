@@ -4,9 +4,11 @@ on:
   push:
     paths:
       - 'backend/**'
+      - '.docker/backend/**'
   pull_request:
     paths:
       - 'backend/**'
+      - '.docker/backend/**'
 
 jobs:
   build:
