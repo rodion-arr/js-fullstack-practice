@@ -14,6 +14,7 @@
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
     "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
+    "lint-ci": "tslint -c tslint.json -e './node_modules/**/*.*' './**/*.ts'",
     "copy-static-assets": "ts-node copyStaticAssets.ts",
     "debug": "npm run build && npm run watch-debug",
     "serve-debug": "nodemon --inspect=0.0.0.0 dist/server.js",

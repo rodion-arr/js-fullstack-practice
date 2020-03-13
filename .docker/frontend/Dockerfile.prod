@@ -25,11 +25,14 @@ RUN npm install -g @angular/cli
 # add app
 COPY ./frontend/ /app
 
+# verify code-style
+RUN ng lint; \
+
 # run tests
-RUN ng test --watch=false
+ng test --watch=false; \
 
 # generate build
-RUN ng build --output-path=dist
+ng build --output-path=dist;
 
 ############
 ### prod ###

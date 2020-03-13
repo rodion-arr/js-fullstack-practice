@@ -4,9 +4,11 @@ on:
   push:
     paths:
       - 'frontend/**'
+      - '.docker/frontend/**'
   pull_request:
     paths:
       - 'frontend/**'
+      - '.docker/frontend/**'
 
 jobs:
   build:

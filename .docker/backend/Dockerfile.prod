@@ -16,7 +16,8 @@ RUN npm install
 COPY ./backend/ /app
 
 RUN npm run build; \
-npm run test;
+    npm run lint-ci; \
+    npm run test;
 
 # start app
 CMD npm run start
