@@ -29,7 +29,7 @@ COPY ./frontend/ /app
 RUN ng lint; \
 
 # run tests
-ng test --watch=false; \
+ng test --watch=false --code-coverage; \
 
 # generate build
 ng build --output-path=dist;
