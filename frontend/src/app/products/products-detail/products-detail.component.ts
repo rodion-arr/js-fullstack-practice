@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
@@ -12,7 +12,8 @@ import { ProductsSelectors } from '../../store';
 @Component({
   selector: 'app-products-detail',
   templateUrl: './products-detail.component.html',
-  styleUrls: ['./products-detail.component.sass']
+  styleUrls: ['./products-detail.component.sass'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductsDetailComponent implements OnInit, OnDestroy {
   product: Product;
@@ -22,16 +23,19 @@ export class ProductsDetailComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private store: Store,
     private productsSelectors: ProductsSelectors,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private cdr: ChangeDetectorRef
   ) {
+  }
+
+  ngOnInit(): void {
     this.productSubscription = this.productsSelectors.activatedProduct$
       .subscribe((product: Product) => {
         this.product = product;
         this.store.dispatch(new SetPageSubtitle(product?.fullTitle));
+        this.cdr.detectChanges();
       });
-  }
 
-  ngOnInit(): void {
     this.route.params
       .pipe(
         map(params => params.slug)

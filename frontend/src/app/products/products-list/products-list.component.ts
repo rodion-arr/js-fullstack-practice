@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
@@ -9,7 +9,8 @@ import { ProductsSelectors } from '../../store';
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.component.html',
-  styleUrls: ['./products-list.component.sass']
+  styleUrls: ['./products-list.component.sass'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductsListComponent implements OnInit, OnDestroy {
   products$: Observable<Product[]>;
