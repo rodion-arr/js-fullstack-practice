@@ -7,6 +7,7 @@ import cors from 'cors';
 
 // Controllers (route handlers)
 import * as productsController from './controllers/products';
+import * as ordersController from './controllers/orders';
 
 // Create Express server
 const app = express();
@@ -28,10 +29,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-/**
- * API examples routes.
- */
+// Product APIs
 app.get('/products', productsController.getProducts);
 app.get('/products/:slug', productsController.getProductBySlug);
+
+// Order APIs
+app.post('/orders', ordersController.postOrders);
 
 export default app;
