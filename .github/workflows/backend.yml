@@ -21,8 +21,8 @@ jobs:
       run: |
         cd ".docker"
         docker-compose -f docker-compose.yml -f docker-compose.prod.yml build backend mongodb
-        docker-compose up -d backend 
-        docker-compose exec backend mv ./coverage/clover.xml ./shared
+        docker-compose up -d backend
+        docker-compose exec -T backend mv ./coverage/clover.xml ./shared
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
