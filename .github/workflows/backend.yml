@@ -21,3 +21,13 @@ jobs:
       run: |
         cd ".docker"
         docker-compose -f docker-compose.yml -f docker-compose.prod.yml build backend mongodb
+        docker-compose up -d backend 
+        docker-compose exec backend mv ./coverage/clover.xml ./shared
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./shared/clover.xml
+        flags: unittests
+        fail_ci_if_error: true
