@@ -22,7 +22,7 @@
     "@angular/platform-browser": "~9.1.1",
     "@angular/platform-browser-dynamic": "~9.1.1",
     "@angular/router": "~9.1.1",
-    "@angular/youtube-player": "^8.2.3",
+    "@angular/youtube-player": "^9.2.0",
     "@ngrx/effects": "^9.1.0",
     "@ngrx/store": "^9.1.0",
     "@ngrx/store-devtools": "^9.1.0",
