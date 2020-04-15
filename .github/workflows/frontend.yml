@@ -11,7 +11,7 @@ on:
       - '.docker/frontend/**'
 
 jobs:
-  codecov-backend:
+  codecov-frontend:
     runs-on: ubuntu-latest
     strategy:
       matrix:
