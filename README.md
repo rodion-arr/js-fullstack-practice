@@ -2,6 +2,7 @@
 
 [![Frontend](https://github.com/rodion-arr/js-fullstack-practice/workflows/Frontend/badge.svg)](https://github.com/rodion-arr/js-fullstack-practice/actions?query=workflow%3AFrontend)
 [![Backend](https://github.com/rodion-arr/js-fullstack-practice/workflows/Backend/badge.svg)](https://github.com/rodion-arr/js-fullstack-practice/actions?query=workflow%3ABackend)
+[![codecov](https://codecov.io/gh/rodion-arr/js-fullstack-practice/branch/master/graph/badge.svg)](https://codecov.io/gh/rodion-arr/js-fullstack-practice)
 
 A project for practice Fullstack JS technologies
 

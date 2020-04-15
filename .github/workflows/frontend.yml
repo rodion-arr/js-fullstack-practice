@@ -11,13 +11,38 @@ on:
       - '.docker/frontend/**'
 
 jobs:
-  build:
-
+  codecov-frontend:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        node-version: [12.x]
     steps:
-    - uses: actions/checkout@v1
-    - name: Build fronternd image
-      run: |
-        cd ".docker"
-        docker-compose -f docker-compose.yml -f docker-compose.prod.yml build frontend
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: |
+          cd frontend
+          npm install
+          npm run test-ci
+        env:
+          CI: true
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./frontend/reports/junit.xml
+          flags: unittests
+          name: fronend
+          fail_ci_if_error: true
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build frontend image
+        run: |
+          cd ".docker"
+          docker-compose -f docker-compose.yml -f docker-compose.prod.yml build frontend
+
