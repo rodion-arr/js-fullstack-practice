@@ -73,7 +73,7 @@ Unit tests will be run automatically during docker image build
 - [ ] CI
     - [x] Setup GitHub actions - [#10](https://github.com/rodion-arr/js-fullstack-practice/pull/10)
     - [x] Run tests - [Running in docker build](/.docker/frontend/Dockerfile.prod#L29)
-    - [ ] Publish coverage report
+    - [x] Publish coverage report - [Integrated with Codecov](https://codecov.io/gh/rodion-arr/js-fullstack-practice)
 - [ ] CD
     - [x] Frontend image for deployment - [Production Docker image](/.docker/frontend/Dockerfile.prod)
     - [x] Backend images for deployment - [Production NodeJS Docker image](/.docker/backend/Dockerfile.prod)
