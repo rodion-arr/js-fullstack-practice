@@ -32,7 +32,7 @@ jobs:
         uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          file: ./frontend/coverage/clover.xml
+          file: ./frontend/coverage/f/clover.xml
           flags: unittests
           name: fronend
           fail_ci_if_error: true
