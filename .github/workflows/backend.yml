@@ -1,16 +1,6 @@
 name: Backend
 
-on:
-  push:
-    paths:
-      - 'backend/**'
-      - '.docker/backend/**'
-      - '.github/workflows/backend.yml'
-  pull_request:
-    paths:
-      - 'backend/**'
-      - '.docker/backend/**'
-      - '.github/workflows/backend.yml'
+on: [push, pull_request]
 
 jobs:
   codecov-backend:

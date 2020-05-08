@@ -1,16 +1,6 @@
 name: Frontend
 
-on:
-  push:
-    paths:
-      - 'frontend/**'
-      - '.docker/frontend/**'
-      - '.github/workflows/frontend.yml'
-  pull_request:
-    paths:
-      - 'frontend/**'
-      - '.docker/frontend/**'
-      - '.github/workflows/frontend.yml'
+on: [push, pull_request]
 
 jobs:
   codecov-frontend:
