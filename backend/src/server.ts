@@ -12,4 +12,25 @@ const server = app.listen(app.get('port'), () => {
     console.log('  Press CTRL-C to stop\n');
 });
 
+process.on('SIGINT', () => {
+    console.log('Signal is SIGINT');
+    server.close(() => {
+        process.exit(0);
+    });
+});
+
+process.on('SIGTERM', () => {
+    console.log('Signal is SIGTERM');
+    server.close(() => {
+        process.exit(0);
+    });
+});
+
+process.on('SIGUSR2', () => {
+    console.log('Signal is SIGUSR2');
+    server.close(() => {
+        process.exit(1);
+    });
+});
+
 export default server;

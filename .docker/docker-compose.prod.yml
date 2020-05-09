@@ -13,10 +13,9 @@ services:
     container_name: backend-prod
     build:
       dockerfile: ./.docker/backend/Dockerfile.prod
-    volumes:
-      - '../shared:/app/shared'
+    volumes: []
     ports:
-      - '3000:3000'
+      - '8080:8080'
 
   mongodb:
     container_name: mongodb-prod
