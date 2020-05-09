@@ -6,6 +6,11 @@
 
 A project for practice Fullstack JS technologies
 
+**Summary of used technologies:**
+- Front-end (Angular 9/TypeScript/SASS/CSS Flex/CSS Grid/Angular Material/Jasmine)
+- Back-end (Node.js/TypeScript/Express/Mongoose/Jest/Cluster)
+- Infra (Docker/GitHub Actions/CI/Codecov/DependaBot)
+
 <img src="https://user-images.githubusercontent.com/5843270/81486438-73c31500-925d-11ea-8e05-787e016f5df7.png" width="30%"></img>
 <img src="https://user-images.githubusercontent.com/5843270/81486426-66a62600-925d-11ea-8284-26cc7de3d045.png" width="30%"></img>
 <img src="https://user-images.githubusercontent.com/5843270/81486436-71f95180-925d-11ea-90f4-8b3970f716de.png" width="10%"></img> 
