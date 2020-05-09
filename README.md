@@ -6,13 +6,17 @@
 
 A project for practice Fullstack JS technologies
 
+<img src="https://user-images.githubusercontent.com/5843270/81486438-73c31500-925d-11ea-8e05-787e016f5df7.png" width="30%"></img>
+<img src="https://user-images.githubusercontent.com/5843270/81486426-66a62600-925d-11ea-8284-26cc7de3d045.png" width="30%"></img>
+<img src="https://user-images.githubusercontent.com/5843270/81486436-71f95180-925d-11ea-90f4-8b3970f716de.png" width="10%"></img> 
+
 ## How to run
 ### Development run
 Run project locally (tested on Docker Desktop v19)
 ```bash
 cd ".docker"
 docker-compose up -d #run project services
-migrate-mongo up #run migrations
+docker-compose exec backend migrate-mongo up #run migrations
 open http://localhost:4200
 ```
 

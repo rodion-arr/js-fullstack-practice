@@ -9,7 +9,7 @@ migrate-mongo down
 
 const config = {
   mongodb: {
-    url: 'mongodb://localhost:27017',
+    url: 'mongodb://mongodb:27017',
     databaseName: 'fullStackProject',
 
     options: {
