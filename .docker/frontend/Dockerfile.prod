@@ -32,7 +32,7 @@ RUN ng lint; \
 ng test --watch=false --code-coverage; \
 
 # generate build
-ng build --output-path=dist;
+ng build --prod --output-path=dist;
 
 ############
 ### prod ###
