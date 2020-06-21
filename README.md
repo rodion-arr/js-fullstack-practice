@@ -79,7 +79,7 @@ Unit tests will be run automatically during docker image build
 ## DevOps
 - [ ] Use docker containers 
     - [x] Frontend image for development - [#1](https://github.com/rodion-arr/js-fullstack-practice/pull/1)
-    - [x] Backend image for development - [NodeJS in container](/.docker/backend/Dockerfile)
+    - [x] Backend image for development - [NodeJS in container](/.docker/backend/Dockerfile.prod)
 - [ ] CI
     - [x] Setup GitHub actions - [#10](https://github.com/rodion-arr/js-fullstack-practice/pull/10)
     - [x] Run tests - [Running in docker build](/.docker/frontend/Dockerfile.prod#L29)
