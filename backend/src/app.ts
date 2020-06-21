@@ -15,12 +15,20 @@ const app = express();
 // Connect to MongoDB
 const mongoUrl = 'mongodb://mongodb:27017/fullStackProject';
 
-mongoose.connect(mongoUrl, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true } ).then(
-    () => console.log('MongoDB ready to use.'),
-).catch(err => {
-    logger.error('MongoDB connection error. Please make sure MongoDB is running.', err);
-    app.emit('shutdown');
-});
+(async () => {
+    try {
+        await mongoose.connect(mongoUrl, {
+            useNewUrlParser: true,
+            useCreateIndex: true,
+            useUnifiedTopology: true
+        });
+
+        logger.info('MongoDB ready to use.');
+    } catch (err) {
+        logger.error('MongoDB connection error. Please make sure MongoDB is running.', err);
+        app.emit('shutdown');
+    }
+})();
 
 // Express configuration
 app.set('port', process.env.PORT || 3000);
