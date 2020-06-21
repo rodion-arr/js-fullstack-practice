@@ -73,6 +73,7 @@ Unit tests will be run automatically during docker image build
 - [ ] MongoDB - [#35](https://github.com/rodion-arr/js-fullstack-practice/pull/35)
     - [x] Mongoose - [#41](https://github.com/rodion-arr/js-fullstack-practice/pull/41)
     - [x] DB Migrations - [#42](https://github.com/rodion-arr/js-fullstack-practice/pull/42)
+- [x] Graceful shutdown - [#199](https://github.com/rodion-arr/js-fullstack-practice/pull/199)
 - [ ] Auth
 
 ## DevOps

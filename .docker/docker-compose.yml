@@ -9,6 +9,8 @@ services:
     volumes:
       - '../frontend:/app'
       - '/app/node_modules'
+    depends_on:
+      - backend
     ports:
       - '4200:4200'
 
@@ -20,6 +22,8 @@ services:
     volumes:
       - '../backend:/app'
       - '/app/node_modules'
+    depends_on:
+      - mongodb
     ports:
       - '3000:3000'
       - '9229:9229'
