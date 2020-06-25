@@ -17,10 +17,10 @@ module.exports = function (config) {
     },
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, './coverage/f'),
-      reports: ['text-summary', 'clover'],
+      reports: ['lcovonly', 'text-summary', 'clover'],
       fixWebpackSourcePaths: true
     },
-    reporters: ['progress', 'coverage-istanbul'],
+    reporters: ['progress', 'coverage-istanbul', 'kjhtml'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
