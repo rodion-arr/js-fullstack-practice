@@ -7,7 +7,7 @@
 A project for practice Fullstack JS technologies
 
 **Summary of used technologies:**
-- Front-end (Angular 9/TypeScript/SASS/CSS Flex/CSS Grid/Angular Material/Jasmine)
+- Front-end (Angular 10/TypeScript/SASS/CSS Flex/CSS Grid/Angular Material/Jasmine)
 - Back-end (Node.js/TypeScript/Express/Mongoose/Jest/Cluster)
 - Infra (Docker/GitHub Actions/CI/Codecov/DependaBot)
 
