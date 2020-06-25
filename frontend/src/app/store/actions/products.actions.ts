@@ -1,6 +1,6 @@
 import { Action } from '@ngrx/store';
 
-import { DataAction, DataErrorAction } from './data.actions';
+import { DataAction } from './data.actions';
 import { Product } from '../../core/model/product';
 
 export const GET_PRODUCTS_LIST = '[Products] GET_PRODUCTS_LIST';
