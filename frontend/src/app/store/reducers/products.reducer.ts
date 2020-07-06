@@ -18,15 +18,12 @@ export function reducer(
     switch (action.type) {
       case ProductActions.GET_PRODUCTS_SUCCESS: {
         return {...state, productsList: action.payload};
-        break;
       }
       case ProductActions.GET_ACTIVATED_PRODUCT_SUCCESS: {
         return { ...state, activatedProduct: action.payload };
-        break;
       }
       case ProductActions.ACTIVATED_PRODUCT_RESET: {
         return { ...state, activatedProduct: null };
-        break;
       }
     }
     return state;
