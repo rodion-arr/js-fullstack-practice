@@ -27,4 +27,8 @@ describe('AboutComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have destroy handler', () => {
+    component.ngOnDestroy();
+  });
 });
