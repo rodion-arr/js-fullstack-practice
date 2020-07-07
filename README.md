@@ -70,6 +70,7 @@ Unit tests will be run automatically during docker image build
 ## Backend 
 - [ ] NodeJs API
 - [x] Express - [app.ts](https://github.com/rodion-arr/js-fullstack-practice/blob/master/backend/src/app.ts)
+    - [x] Router - [#216](https://github.com/rodion-arr/js-fullstack-practice/pull/216)
 - [x] TypeScript - [#39](https://github.com/rodion-arr/js-fullstack-practice/pull/39)
 - [ ] MongoDB - [#35](https://github.com/rodion-arr/js-fullstack-practice/pull/35)
     - [x] Mongoose - [#41](https://github.com/rodion-arr/js-fullstack-practice/pull/41)
