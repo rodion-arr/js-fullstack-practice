@@ -5,9 +5,12 @@ import path from 'path';
 import logger from './util/logger';
 import cors from 'cors';
 
+// Routes
+import { ordersRouter } from './routes/orders.router';
+import { productsRouter } from './routes/products.router';
+
 // Controllers (route handlers)
 import * as productsController from './controllers/products';
-import * as ordersController from './controllers/orders';
 
 // Create Express server
 const app = express();
@@ -38,11 +41,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Product APIs
-app.get('/products', productsController.getProducts);
-app.get('/products/:slug', productsController.getProductBySlug);
-
-// Order APIs
-app.post('/orders', ordersController.postOrders);
+app.use('/products', productsRouter);
+app.use('/orders', ordersRouter);
 
 export default app;
