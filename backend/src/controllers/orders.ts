@@ -10,8 +10,6 @@ import { Order } from '../models/Order';
  * POST /orders
  */
 export const postOrders = async (req: Request, res: Response) => {
-    logger.info('POST /orders request', req.body);
-
     await check('userName').isLength({ min: 2, max: 100 }).run(req);
     await check('email').isEmail().run(req);
     await check('phone').isMobilePhone('any').run(req);

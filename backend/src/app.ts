@@ -8,9 +8,7 @@ import cors from 'cors';
 // Routes
 import { ordersRouter } from './routes/orders.router';
 import { productsRouter } from './routes/products.router';
-
-// Controllers (route handlers)
-import * as productsController from './controllers/products';
+import { requestLogger } from './middleware/log.middleware';
 
 // Create Express server
 const app = express();
@@ -40,6 +38,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(requestLogger);
 
 app.use('/products', productsRouter);
 app.use('/orders', ordersRouter);
