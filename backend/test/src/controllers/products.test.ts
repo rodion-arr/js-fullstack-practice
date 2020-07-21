@@ -48,14 +48,15 @@ describe('products controller', () => {
 
         it('should return correct data object on error', (done) => {
             const productSpy = jest.spyOn(Product, 'find').mockImplementation(() => {
-                throw new Error();
+                throw new Error('error from test');
             });
 
             request(app).get('/products')
                 .expect(200)
                 .end((err: Error, response) => {
+                    expect(response.status).toBe(500);
                     expect(response.body.status).toBe(false);
-                    expect(response.body.message).toBe('Failed to get Product list');
+                    expect(response.body.message).toBe('error from test');
                     productSpy.mockClear();
                     done();
                 });
@@ -99,9 +100,10 @@ describe('products controller', () => {
             request(app).get('/products/test-product')
                 .expect(200)
                 .end((err: Error, response) => {
+                    expect(response.status).toBe(500);
                     expect(response.body.status).toBe(false);
-                    expect(response.body.message).toBe('Failed to get product');
-                    expect(loggerSpy).toHaveBeenCalledWith('Some error');
+                    expect(response.body.message).toBe('Some error');
+                    expect(loggerSpy).toHaveBeenCalledWith('Request to GET /products/test-product FAILED', {'error': 'Some error'});
                     productSpy.mockClear();
                     done();
                 });
@@ -114,9 +116,10 @@ describe('products controller', () => {
             request(app).get('/products/test-product')
                 .expect(200)
                 .end((err: Error, response) => {
+                    expect(response.status).toBe(404);
                     expect(response.body.status).toBe(false);
-                    expect(response.body.message).toBe('Failed to get product');
-                    expect(loggerSpy).toHaveBeenCalledWith('Product test-product not found');
+                    expect(response.body.message).toBe('Product test-product not found');
+                    expect(loggerSpy).toHaveBeenCalledWith('Request to GET /products/test-product NOT FOUND', {'message': 'Product test-product not found'});
                     productSpy.mockClear();
                     done();
                 });
