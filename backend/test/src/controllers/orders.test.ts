@@ -59,9 +59,10 @@ describe('products controller', () => {
                 .send(requestBody)
                 .expect(200)
                 .end((err: Error, response) => {
+                    expect(response.status).toBe(500);
                     expect(response.body.status).toBe(false);
-                    expect(response.body.message).toBe('Failed to add order');
-                    expect(logger.error).toHaveBeenCalledWith('POST /orders request error', {
+                    expect(response.body.message).toBe('error from test');
+                    expect(logger.error).toHaveBeenCalledWith('Request to POST /orders FAILED', {
                         error: 'error from test'
                     });
 
@@ -75,8 +76,8 @@ describe('products controller', () => {
 
             request(app).post('/orders')
                 .send({})
-                .expect(200)
                 .end((err: Error, response) => {
+                    expect(response.status).toBe(422);
                     expect(response.body.status).toBe(false);
                     expect(response.body.message).toBe('Failed to add order');
                     expect(orderSpy).toHaveBeenCalledTimes(0);

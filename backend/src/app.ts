@@ -8,7 +8,10 @@ import cors from 'cors';
 // Routes
 import { ordersRouter } from './routes/orders.router';
 import { productsRouter } from './routes/products.router';
+
+// Middleware
 import { requestLogger } from './middleware/log.middleware';
+import { validationErrorMiddleware, generalErrorMiddleware, notFoundErrorMiddleware } from './middleware/error.middleware';
 
 // Create Express server
 const app = express();
@@ -43,5 +46,9 @@ app.use(requestLogger);
 
 app.use('/products', productsRouter);
 app.use('/orders', ordersRouter);
+
+app.use(validationErrorMiddleware);
+app.use(notFoundErrorMiddleware);
+app.use(generalErrorMiddleware);
 
 export default app;
