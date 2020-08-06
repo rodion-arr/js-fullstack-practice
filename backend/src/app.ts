@@ -10,8 +10,7 @@ import { ordersRouter } from './routes/orders.router';
 import { productsRouter } from './routes/products.router';
 
 // Middleware
-import { requestLogger } from './middleware/log.middleware';
-import { validationErrorMiddleware, generalErrorMiddleware, notFoundErrorMiddleware } from './middleware/error.middleware';
+import { validationErrorMiddleware, generalErrorMiddleware, notFoundErrorMiddleware, requestLogger } from './middleware';
 
 // Create Express server
 const app = express();

@@ -1,9 +1,9 @@
 'use strict';
 
 import { Response, Request } from 'express';
-import { Product, ProductDocument } from '../models/Product';
+import { Product, ProductDocument } from '../models';
 import { AddressInfo } from 'net';
-import { NotFoundError } from '../errors/not-found.error';
+import { NotFoundError } from '../errors';
 
 /**
  * Formats Products URL to absolute format

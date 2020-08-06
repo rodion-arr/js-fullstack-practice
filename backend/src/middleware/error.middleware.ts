@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
-import { ValidationError } from '../errors/validation.error';
 import { UNPROCESSABLE_ENTITY, INTERNAL_SERVER_ERROR, NOT_FOUND } from 'http-status-codes';
 import logger from '../util/logger';
-import { NotFoundError } from '../errors/not-found.error';
+import { NotFoundError } from '../errors';
+import { ValidationError } from '../errors';
 
 /**
  * Middlware for handling validation errors from controllers
@@ -65,13 +65,4 @@ export const generalErrorMiddleware = (error: Error, req: Request, res: Response
         status: false,
         message: error.message,
     });
-};
-
-/**
- * Function for wrapping async controllers in order to catch promise rejections
- */
-export const asyncWrap = (fn: any) => {
-    return function (req: Request, res: Response, next: () => void) {
-        fn(req, res, next).catch(next);
-    };
 };
