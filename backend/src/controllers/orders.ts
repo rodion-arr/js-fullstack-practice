@@ -3,8 +3,8 @@
 import { Response, Request } from 'express';
 import { CREATED } from 'http-status-codes';
 import { check, validationResult } from 'express-validator';
-import { Order } from '../models/Order';
-import { ValidationError } from '../errors/validation.error';
+import { Order } from '../models';
+import { ValidationError } from '../errors';
 
 /**
  * POST /orders

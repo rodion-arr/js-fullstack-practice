@@ -1,6 +1,6 @@
 import request from 'supertest';
 import app from '../../../src/app';
-import { Product } from '../../../src/models/Product';
+import { Product } from '../../../src/models';
 import logger from '../../../src/util/logger';
 import SpyInstance = jest.SpyInstance;
 

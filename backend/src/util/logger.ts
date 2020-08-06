@@ -8,12 +8,10 @@ const logger: Logger = winston.createLogger({
         format.json()
     ),
     transports: [
-        new winston.transports.Console({ level: process.env.NODE_ENV === 'production' ? 'info' : 'debug' }),
+        new winston.transports.Console({ level: 'debug' }),
     ]
 });
 
-if (process.env.NODE_ENV !== 'production') {
-    logger.debug('Logging initialized at debug level');
-}
+logger.debug('Logging initialized at debug level');
 
 export default logger;
