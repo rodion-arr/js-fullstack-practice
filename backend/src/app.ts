@@ -10,6 +10,7 @@ import prometheus from 'prom-client';
 // Routes
 import { ordersRouter } from './routes/orders.router';
 import { productsRouter } from './routes/products.router';
+import { metricsRouter } from './routes/metrics.router';
 
 // Middleware
 import { validationErrorMiddleware, generalErrorMiddleware, notFoundErrorMiddleware, requestLogger } from './middleware';
@@ -49,15 +50,7 @@ app.use(requestLogger);
 
 app.use('/products', productsRouter);
 app.use('/orders', ordersRouter);
-
-app.get('/metrics', async (req, res) => {
-    try {
-        res.set('Content-Type', prometheus.register.contentType);
-        res.end(await prometheus.register.metrics());
-    } catch (ex) {
-        res.status(500).end(ex);
-    }
-});
+app.use('/metrics', metricsRouter);
 
 app.use(validationErrorMiddleware);
 app.use(notFoundErrorMiddleware);
