@@ -7,43 +7,53 @@
 A project for practice Fullstack JS technologies
 
 **Summary of used technologies:**
+
 - Front-end (Angular 10/TypeScript/SASS/CSS Flex/CSS Grid/Angular Material/Jasmine)
 - Back-end (Node.js/TypeScript/Express/Mongoose/Jest/Cluster)
-- Infra (Docker/GitHub Actions/CI/Codecov/DependaBot)
+- Infra (Docker/GitHub Actions/CI/Codecov/DependaBot/Prometheus/Grafana)
 
 <img src="https://user-images.githubusercontent.com/5843270/81486438-73c31500-925d-11ea-8e05-787e016f5df7.png" width="30%"></img>
 <img src="https://user-images.githubusercontent.com/5843270/81486426-66a62600-925d-11ea-8284-26cc7de3d045.png" width="30%"></img>
-<img src="https://user-images.githubusercontent.com/5843270/81486436-71f95180-925d-11ea-90f4-8b3970f716de.png" width="10%"></img> 
+<img src="https://user-images.githubusercontent.com/5843270/81486436-71f95180-925d-11ea-90f4-8b3970f716de.png" width="10%"></img>
 
 ## How to run
+
 ### Development run
+
 Run project locally (tested on Docker Desktop v19)
+
 ```bash
 cd ".docker"
-docker-compose up -d #run project services
+docker-compose up -d mongodb backend frontend #run project services with no monitoring
 docker-compose exec backend migrate-mongo up #run migrations
-open http://localhost:4200
+open http://localhost:4200 # open project's frontend
+
+docker-compose up -d prometheus grafana #run monitoring
+open http://localhost:3000 # open grafana
 ```
 
-Run frontend tests
+Run tests
+
 ```bash
 docker-compose exec frontend ng test --watch=false
-docker-compose exec frontend ng e2e --port 4202
+docker-compose exec backend npm test
 ```
 
 ### Production run
+
 ```bash
 cd ".docker"
-docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up mongodb backend frontend -d
 open http://localhost
 ```
 
 Unit tests will be run automatically during docker image build
 
-## Frontend 
+## Frontend
+
 - [ ] Smart containers/Dummy components pattern 
 - [x] Module organization: core, shared, feature - [#3](https://github.com/rodion-arr/js-fullstack-practice/pull/3)
-- [x] Templates 
+- [x] Templates
     - [x] Angular Material - [#2](https://github.com/rodion-arr/js-fullstack-practice/pull/2)
     - [x] Angular Flex - [example - plates.component.html](https://github.com/rodion-arr/js-fullstack-practice/blob/master/frontend/src/app/home/plates/plates.component.html)
     - [x] SASS for styling - [example - footer.component.sass](https://github.com/rodion-arr/js-fullstack-practice/blob/master/frontend/src/app/core/footer/footer.component.sass)
@@ -59,7 +69,7 @@ Unit tests will be run automatically during docker image build
         - [x] Dedicated Store module - [#31](https://github.com/rodion-arr/js-fullstack-practice/pull/31)
         - [ ] CRUD with entities
     - [ ] HttpClient for all async call
-    - [ ] Build HttpInterceptor   
+    - [ ] Build HttpInterceptor
 - [ ] Unit tests
     - [x] Karma, Jasmine - [example with Material BreakpointObserver mock - top-menu.component.spec.ts](https://github.com/rodion-arr/js-fullstack-practice/blob/master/frontend/src/app/core/top-menu/top-menu.component.spec.ts)
 - [ ] Keeping up-to-date
@@ -67,7 +77,8 @@ Unit tests will be run automatically during docker image build
     - [x] Upgrade to Angular 10 - [#200](https://github.com/rodion-arr/js-fullstack-practice/pull/200)
 - [x] CSS Grid - [#47](https://github.com/rodion-arr/js-fullstack-practice/pull/47)
 
-## Backend 
+## Backend
+
 - [ ] NodeJs API
 - [x] Express - [app.ts](https://github.com/rodion-arr/js-fullstack-practice/blob/master/backend/src/app.ts)
     - [x] Router - [#216](https://github.com/rodion-arr/js-fullstack-practice/pull/216)
@@ -79,7 +90,8 @@ Unit tests will be run automatically during docker image build
 - [ ] Auth
 
 ## DevOps
-- [ ] Use docker containers 
+
+- [ ] Use docker containers
     - [x] Frontend image for development - [#1](https://github.com/rodion-arr/js-fullstack-practice/pull/1)
     - [x] Backend image for development - [NodeJS in container](/.docker/backend/Dockerfile.prod)
 - [ ] CI
@@ -89,4 +101,7 @@ Unit tests will be run automatically during docker image build
 - [ ] CD
     - [x] Frontend image for deployment - [Production Docker image](/.docker/frontend/Dockerfile.prod)
     - [x] Backend images for deployment - [Production NodeJS Docker image](/.docker/backend/Dockerfile.prod)
-    - [ ] Push to dockerhub 
+    - [ ] Push to dockerhub
+- [ ] Monitoring
+  - [x] Prometheus + Grafana - [#246](https://github.com/rodion-arr/js-fullstack-practice/pull/246)
+  <img src="https://user-images.githubusercontent.com/5843270/91171228-cdebc700-e6e2-11ea-8e43-ae66a4404c20.png"></img>
