@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { MatIconModule } from '@angular/material/icon';
 import { Store } from '@ngrx/store';
@@ -18,7 +18,7 @@ describe('ProductsListComponent', () => {
     }
   };
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ProductsListComponent ],
       imports: [

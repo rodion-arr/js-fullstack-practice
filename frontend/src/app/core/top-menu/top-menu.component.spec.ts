@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../../shared/shared.module';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -32,7 +32,7 @@ describe('TopMenuComponent', () => {
     matchObj[3].result = (width <= 750);
   }
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,

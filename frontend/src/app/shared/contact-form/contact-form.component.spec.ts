@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ContactFormComponent } from './contact-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -12,7 +12,7 @@ describe('ContactFormComponent', () => {
   let fixture: ComponentFixture<ContactFormComponent>;
   let snackSpy: any;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     snackSpy = jasmine.createSpyObj('MatSnackBar', ['open']);
 
     TestBed.configureTestingModule({

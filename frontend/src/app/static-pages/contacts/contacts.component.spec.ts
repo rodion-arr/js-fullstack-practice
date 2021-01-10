@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ContactsComponent } from './contacts.component';
 import { MatInputModule } from '@angular/material/input';
@@ -14,7 +14,7 @@ describe('ContactsComponent', () => {
   @Component({selector: 'app-contact-form', template: 'app-contact-form'})
   class ContactFormComponent {}
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         MatInputModule,
