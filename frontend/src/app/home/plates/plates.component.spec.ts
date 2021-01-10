@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { MatIconModule } from '@angular/material/icon';
 import { Component } from '@angular/core';
 
@@ -11,7 +11,7 @@ describe('PlatesComponent', () => {
   @Component({selector: 'app-footer', template: 'app-footer'})
   class FooterComponent {}
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         MatIconModule,

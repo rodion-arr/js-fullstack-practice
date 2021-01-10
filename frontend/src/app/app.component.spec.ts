@@ -1,4 +1,4 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { Component } from '@angular/core';
@@ -13,7 +13,7 @@ describe('AppComponent', () => {
   @Component({selector: 'app-sub-title', template: 'app-sub-title'})
   class SubTitleComponent {}
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule

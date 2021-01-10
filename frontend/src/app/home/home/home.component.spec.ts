@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
 import { Component } from '@angular/core';
@@ -19,7 +19,7 @@ describe('HomeComponent', () => {
   @Component({selector: 'app-home-contact-us', template: 'app-home-contact-us'})
   class FakeContactUsComponent {}
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ FakeBannerComponent, FakeVideoComponent, FakePlatesComponent, FakeContactUsComponent, HomeComponent ]
     })

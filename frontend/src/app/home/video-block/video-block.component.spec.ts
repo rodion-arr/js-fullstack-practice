@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { VideoBlockComponent } from './video-block.component';
 import { Component } from '@angular/core';
@@ -10,7 +10,7 @@ describe('VideoBlockComponent', () => {
   @Component({selector: 'app-responsive-video-block', template: 'app-responsive-video-block'})
   class FakeVideoComponentComponent {}
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ VideoBlockComponent, FakeVideoComponentComponent ]
     })

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ResponsiveVideoBlockComponent } from './responsive-video-block.component';
 import { Component, Input } from '@angular/core';
@@ -15,7 +15,7 @@ describe('ResponsiveVideoBlockComponent', () => {
     @Input() height: string;
   }
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ FakeYoutubePlayer, ResponsiveVideoBlockComponent ]
     })
