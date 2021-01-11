@@ -75,6 +75,7 @@ Unit tests will be run automatically during docker image build
 - [ ] Keeping up-to-date
     - [x] Upgrade to Angular 9 - [#29](https://github.com/rodion-arr/js-fullstack-practice/pull/29)
     - [x] Upgrade to Angular 10 - [#200](https://github.com/rodion-arr/js-fullstack-practice/pull/200)
+    - [x] Upgrade to Angular 11 - [#305](https://github.com/rodion-arr/js-fullstack-practice/pull/305)
 - [x] CSS Grid - [#47](https://github.com/rodion-arr/js-fullstack-practice/pull/47)
 
 ## Backend
