@@ -8,7 +8,7 @@ A project for practice Fullstack JS technologies
 
 **Summary of used technologies:**
 
-- Front-end (Angular 11/TypeScript/SASS/CSS Flex/CSS Grid/Angular Material/Jasmine)
+- Front-end (Angular 12/TypeScript/SASS/CSS Flex/CSS Grid/Angular Material/Jasmine)
 - Back-end (Node.js/TypeScript/Express/Mongoose/Jest/Cluster)
 - Infra (Docker/GitHub Actions/CI/Codecov/DependaBot/Prometheus/Grafana)
 
@@ -76,6 +76,7 @@ Unit tests will be run automatically during docker image build
     - [x] Upgrade to Angular 9 - [#29](https://github.com/rodion-arr/js-fullstack-practice/pull/29)
     - [x] Upgrade to Angular 10 - [#200](https://github.com/rodion-arr/js-fullstack-practice/pull/200)
     - [x] Upgrade to Angular 11 - [#305](https://github.com/rodion-arr/js-fullstack-practice/pull/305)
+    - [x] Upgrade to Angular 12 - [#321](https://github.com/rodion-arr/js-fullstack-practice/pull/321)
 - [x] CSS Grid - [#47](https://github.com/rodion-arr/js-fullstack-practice/pull/47)
 
 ## Backend
